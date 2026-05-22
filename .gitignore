@@ -1,0 +1,25 @@
+# Android/manual build outputs
+build/
+*.apk
+*.idsig
+*.dex
+*.class
+
+# Signing keys and local secrets
+*.keystore
+*.jks
+kiosk.keystore
+local.properties
+
+# Editor/agent workspace state
+.agents/
+.codex/
+.idea/
+.vscode/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Alternate Git metadata used only when .git is unavailable in sandboxed tools
+.git-local/

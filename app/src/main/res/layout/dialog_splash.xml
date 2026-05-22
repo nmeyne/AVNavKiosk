@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Startup splash dialog for AVNavKiosk.
+
+  IMPORTANT:
+  This dialog is intentionally separate from the
+  WebView hierarchy to avoid disturbing Chromium
+  viewport/layout behaviour on older Android tablets.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#CC000000"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/splashBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/splashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:lineSpacingExtra="6dp"
+        android:paddingTop="24dp"
+        android:text="AVNav Kiosk" />
+
+    <TextView
+        android:id="@+id/splashStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#CCCCCC"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:text="Starting..." />
+
+</LinearLayout>
