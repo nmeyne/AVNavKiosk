@@ -310,6 +310,8 @@ Both permissions should be granted for normal operation.
 
 ### Configuration File
 
+For older Android 9 and below devices:
+
 Create:
 ```
 /sdcard/avnavkiosk.conf
@@ -324,6 +326,14 @@ Optional banner image:
 ```
 /sdcard/avnav-banner.png
 ```
+
+For Android 10/11+ devices, these configuration and banner files should be placed in:
+
+/sdcard/Android/data/com.kiosk.avnav/files/
+
+because this is now the preferred modern deployment location.
+
+
 ### Recommended Setup
 
 For dedicated onboard kiosk installations:

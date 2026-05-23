@@ -231,28 +231,43 @@ public class Config {
      * /sdcard/avnavkiosk.conf
      * app external files dir
      */
-    private static File findConfigFile(Context context) {
+private static File findConfigFile(
+        Context context
+) {
 
-        File external =
-                new File(
-                        Environment.getExternalStorageDirectory(),
-                        CONFIG_FILE_NAME
-                );
+    /*
+     * Preferred modern Android location.
+     */
+    File appDir =
+            context.getExternalFilesDir(null);
 
-        if (external.exists()) {
-            return external;
-        }
+    if (appDir != null) {
 
         File appFile =
                 new File(
-                        context.getExternalFilesDir(null),
+                        appDir,
                         CONFIG_FILE_NAME
                 );
 
         if (appFile.exists()) {
             return appFile;
         }
-
-        return null;
     }
+
+    /*
+     * Legacy external storage fallback.
+     */
+    File external =
+            new File(
+                    Environment
+                            .getExternalStorageDirectory(),
+                    CONFIG_FILE_NAME
+            );
+
+    if (external.exists()) {
+        return external;
+    }
+
+    return null;
+}
 }
