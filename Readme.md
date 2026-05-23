@@ -273,13 +273,8 @@ adb devices
 ```
 Install APK:
 ```
-adb install app-debug.apk
+adb install -r AVNavKiosk.apk
 ```
-or:
-```
-adb install AVNavKiosk.apk
-```
-depending on release naming.
 
 ### Option 2 — Direct APK sideload
 
