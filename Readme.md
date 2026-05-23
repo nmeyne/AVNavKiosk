@@ -2,6 +2,11 @@
 
 A lightweight fullscreen Android kiosk wrapper for AVNav, designed for older Android tablets and dedicated marine navigation displays. 'Kiosk' means 'switch on and go', with predefined configuration and network checks for users who are less familiar with Android and expect an appliance-style navigation display.
 
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5614c1bf-37c3-4d80-9042-af11e5778c58" />
+
+<img width="1494" height="920" alt="image" src="https://github.com/user-attachments/assets/cd4ddaaf-2c7b-4c2f-b038-ed59c57e0680" />
+
+
 AVNavKiosk provides:
 
 - stable, more recent Chromium/WebView behaviour on older Android devices
@@ -154,7 +159,7 @@ wifiSSID=SeaScamp1
 bannerFileName=avnav-banner.png
 
 # Splash text shown on startup
-splashText=Welcome to Sea Scamp AVNav\nTouch screen when ready
+splashText=Welcome to Sea Scamp AVNav\n\nPlease check that the server is ready\n(red light on the instrument panel)
 
 # Splash text size
 splashTextSize=20
@@ -190,7 +195,7 @@ Example:
 Recommended:
 
 - PNG format
-- landscape aspect ratio
+- landscape or portrait aspect ratio if portraitLock=true has been set
 - high contrast for daylight readability
 
 ---
@@ -228,7 +233,9 @@ AVNavKiosk has been tested primarily on:
 - LineageOS 15.1
 - Android 8.1
 
-The application should also work on many later Android tablets using modern Chromium-based Android WebView implementations, including later Sony Xperia tablet models.
+and also on a Samsung Galaxy 8 phone (G950F) (Android 9) - for dashboard display
+
+The application should also work on many later Android phones and tablets using modern Chromium-based Android WebView implementations, including later Sony Xperia tablet models.
 
 Important compatibility requirements:
 
@@ -438,7 +445,8 @@ The project is particularly useful for:
 
 - Upload/import operations are intentionally disabled
 - Download operations are intentionally disabled
-- Portrait layouts are not currently optimised
+- Orientation is intentionally locked from start up - choose appropriate
+  text size and splash banners for the orientation you select
 - AVNav HTTP error pages may still require additional handling
 
 ## Security Model
